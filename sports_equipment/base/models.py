@@ -11,3 +11,5 @@ class BorrowedEquipment(models.Model):
 	equipment = models.ForeignKey(Equipment, on_delete=models.CASCADE)
 	name = models.CharField(max_length=200)
 	returned = models.BooleanField(default=False)
+	borrow_time = models.DateTimeField(auto_now_add=True)
+	return_time = models.DateTimeField(blank=False)
