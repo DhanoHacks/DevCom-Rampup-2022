@@ -12,4 +12,4 @@ class BorrowedEquipment(models.Model):
 	name = models.CharField(max_length=200)
 	returned = models.BooleanField(default=False)
 	borrow_time = models.DateTimeField(auto_now_add=True)
-	return_time = models.DateTimeField(required=False)
+	return_time = models.DateTimeField(blank=False)
